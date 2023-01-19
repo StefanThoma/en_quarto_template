@@ -1,1 +1,1 @@
-Sitemap: https://stefanthoma.github.io/de_quarto_template/sitemap.xml
+Sitemap: https://stefanthoma.github.io/en_quarto_template/sitemap.xml

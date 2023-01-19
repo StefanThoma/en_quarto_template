@@ -4,23 +4,20 @@
 # write("", file =   "inst/WORDLIST.txt")
 # check spelling:
 spelling::spell_check_files(list.files(pattern = ".*.qmd$", recursive = TRUE),
-  ignore = readr::read_lines("inst/WORDLIST.txt"),
-  lang = "inst/de_CH_frami.dic"
+  ignore = readr::read_lines("inst/WORDLIST.txt")
 )
 
 # now check those words and whether or not they are really mistakes.
 # once you fixed all mistaked you can:
 words <- spelling::spell_check_files(list.files(pattern = ".*.qmd$", recursive = TRUE),
-  ignore = readr::read_lines("inst/WORDLIST.txt"),
-  lang = "inst/de_CH_frami.dic"
+  ignore = readr::read_lines("inst/WORDLIST.txt")
 )
 # now you can add words to the wordlist
 #-- uncomment the following line
 # write(words[[1]], file =   "inst/WORDLIST.txt", append = TRUE)
 
 spelling::spell_check_files(list.files(pattern = ".*.qmd$", recursive = TRUE),
-  ignore = readr::read_lines("inst/WORDLIST.txt"),
-  lang = "inst/de_CH_frami.dic"
+  ignore = readr::read_lines("inst/WORDLIST.txt")
 )
 
 #-------------------------- style-check ----------------------------------------

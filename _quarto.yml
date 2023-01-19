@@ -3,24 +3,23 @@ project:
   execute-dir: project
   output-dir: docs
 
-lang: de 
 execute: 
   freeze: auto
   
 book:
-  title: "Buch Template"
+  title: "Book Template"
   author: 
     - Jane Doe
     - Who Else
-  site-url: https://stefanthoma.github.io/de_quarto_template/
+  site-url: https://stefanthoma.github.io/en_quarto_template/
   date: today
   date-format: short
   chapters:
     - index.qmd
-    - part: "Teil 1"
+    - part: "Part 1"
       chapters:
         - chapters/intro.qmd
-    - part: chapters/teil2.qmd
+    - part: chapters/part2.qmd
       chapters:
         - chapters/summary.qmd
     - chapters/references.qmd
@@ -37,4 +36,5 @@ format:
     css: styles.css
   pdf:
     documentclass: scrreprt
+    include-in-header: preamble.tex
 editor: source

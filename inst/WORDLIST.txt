@@ -1,24 +1,5 @@
 
-.unnumbered
-bates
-Packages
-Quarto
-References
-refs
-tidyverse
-.callout-tip
-callout-block
-callout-caution
-callout-important
-callout-note
-collapse
-library
-plot
+callout
+qmd
 rnorm
-true
-.packages
-bib
-bookdown
-knitr
-packages.bib
-write
+tidyverse
