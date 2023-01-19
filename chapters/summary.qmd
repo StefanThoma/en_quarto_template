@@ -1,7 +1,5 @@
-# Zusammenfassung
-
-Wer weiss was?
-
+# Summary
+Who knows what?
 ```{r}
 1 + 1
 ```

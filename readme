@@ -1,56 +1,57 @@
-Dies ist eine Vorlage für Quarto Books auf deutsch.
+This is a template for quarto books
 
-# Struktur
+# Structure
 
-Wir haben mehrere Ordner. Hier eine kurze Darstellung, was wo zu finden ist: 
+We have multiple folders here: 
 
-- chapters: Hier finden wir die .qmd files der Kapitel
-- images: Hier sollen alle pngs & jpgs gespeichert werden. Ausserdem finden wir hier auch das Favicon.
-- data: Alle Daten, die im Buch benutzt werden, sollten hier gespeichert sein.
-- R: Hier können wir R-Scripts speichern. Die sind nützlich für Helferfunktionen.
-- inst: Hier finden wir alle files für den spell-check.
-- .github/workflows: Versteckter Ordner; GitHub workflows werden hier gespeichert. 
-- docs: Hier hinein wird das Buch gerendert. Da finden wir auch das PDF des Buches.
-- bib: Hier werden die .bib files gespeichert. Wir haben per default zwei davon.
-  - Eines davon kann direkt mit R erstellt werden (packages), das andere mit zotero.
+- chapters: Here are the .qmd files that make up the book.
+- images: Images, figues and favicon are here.
+- data: Save all data used in this book here.
+- R: This is the place for r-scripts.
+- inst: spell-check file WORDLIST.txt is here. Used to ignore spelling.
+- .github/workflows: Hidden folder with CICD pipeline.
+- docs: Book gets rendered into this folder, includes pdf as well.
+- bib: Both bib files are saved here.
   
   
   
-# Anleitung
+# Instruction
 
-Verändere erst das _quarto.yml file, so dass die Projektdaten -- Autor, Titel -- stimmen.
-Erstelle ein neues Favicon, [zum Beispiel online](https://favicon.io/favicon-generator/). 
-Schreib neue Kapitel im `chapters` Ordner und füge sie entsprechend im _quarto.yml ein. 
-Beachte dabei: Weil wir im _quarto.yml `execute-dir: project` spezifiziert haben, ist der current working directory auf der Projektebene. 
-Das ist unabhängig davon, wo sich das file befindet, das gerade ausgeführt wird. 
-Sprich: Wenn wir in einem Kapitel in dem `chapters` Ordner arbeiten und auf die Daten zugreifen möchten, können wir direkt mit dem Pfad: "data/nameofdata" arbeiten, wir müssen also nicht zuerst in den parent-directory zurück.
-packages.bib erstellst Du mit dem RScript `generateReferences.R`, dazu musst Du nur packages hinzufügen.
+First, create two branches from GitHub: develop and gh-pages.
+Work in the develop branch with a pending merge request to main.
+Then, change the _quarto.yml file so that the project data -- author, title -- is correct.
+Create a new favicon, [for example online](https://favicon.io/favicon-generator/). 
+Write new chapters in the `chapters` folder and add them to _quarto.yml accordingly. 
+Note that because we specified `execute-dir: project` in _quarto.yml, the current working directory is at the project level. 
+This is independent of where the file that is being executed is located. 
+Say: If we are working in a chapter in the `chapters` folder and want to access the data, we can directly use the path: "data/nameofdata", so we don't have to go back to the parent directory first.
+You create packages.bib with the RScript `generateReferences.R`, you just have to add packages.
 
 ## rendern
-Du kannst im Terminal mit 
+Render the book with the terminal command:
 
 `quarto render`
 
-das Buch rendern. 
 
-Mit 
+Use
 
 `quarto preview`
 
-kannst Du das Buch rendern und beobachten, während Du das Buch veränderst. 
+to preview the book while you edit.
 
 
 ## Spellcheck
-Wir haben einen GitHub workflow für einen Deutschen Spell-Check eingerichtet. 
-Dieser wird automatisch ausgeführt, sobald ein pull-request auf den main branch gemacht wird. 
-Dafür brauchen wir die files in dem `inst` Ordner.
-de_CH_frami.dic und de_CH_frami.aff sind die zwei dictionary files. 
-Zusätzlich können wir im WORDLIST.txt file Wörter definieren, die ignoriert werden sollen. 
-In dem Ordner R befindet sich ein R-Script `CICD.R` womit wir die WORDLIST.txt anpassen können.
+We have set up a GitHub workflow for a German Spell-Check. 
+This will be executed automatically when a pull request is made to the main branch. 
+For this we need the WORDLIST.txt file in the `inst` folder.
+We can define words in the WORDLIST.txt file which should be ignored in the spell-check. 
+In the folder R there is a R-Script `CICD.R` with which we can adjust the WORDLIST.txt.
+
 
 ## Stylecheck
-In dem Ordner R befindet sich ein R-Script `CICD.R`. 
-Damit können wir den Stylecheck durchführen, bevor wir mit main mergen.
+In the R folder there is an R script `CICD.R`. 
+With this we can do the style check before we merge with main.
+In the `CICD.R` file you can check whether files need restyling.
 
 ## Publish
-Bei einem angenommenen merge-request wird das Buch automatisch auf den github branch `gh-pages` neu gerendert. Dafür müssen wir aber das Buch einmal lokal rendern mit der Einstellung freeze: true im _quarto.yml
+When merging with main, the book is automatically re-rendered to the github branch `gh-pages`. 

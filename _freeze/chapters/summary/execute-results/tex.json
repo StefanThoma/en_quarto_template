@@ -1,7 +1,7 @@
 {
-  "hash": "776849548c43779fed7e48abc6ff7642",
+  "hash": "09f02a02e29e8d4f7774ee4278a9f9e6",
   "result": {
-    "markdown": "# Zusammenfassung\n\nWer weiss was?\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "markdown": "# Summary\nWho knows what?\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
     "supporting": [
       "summary_files"
     ],

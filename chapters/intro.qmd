@@ -1,35 +1,29 @@
-# Einführung
+# Introduction
 
-Wir können auch Packages zitieren, zum Beispiel: @tidyverse2019.
+We can also cite packages, such as: @tidyverse2019.
 
-# Übungen
+## Exercises
 
-Haben ihren eigenen Titel oder Untertitel.
+Should get their own (sub)titles
 
-Lösungen können wir in einem callout-block geben:
 
 ```{r}
 library(tidyverse)
 ```
 
-# Übungen
-
-Haben ihren eigenen Titel oder Untertitel.
-
-Lösungen können wir in einem callout-block geben:
 
 ::: callout-note
-## Vertiefung
+## These are notes
 
-So sehen Vertiefungen aus.
+They should look like this.
 
 $$\alpha = 0.05$$
 :::
 
 ::: {.callout-tip collapse="true"}
-## Lösung
+## Solution
 
-So werden Lösungen dargestellt.
+Exercise solutions are within these collapsible callout blocks
 
 ```{r}
 rnorm(100) %>%
@@ -38,17 +32,14 @@ rnorm(100) %>%
 :::
 
 ::: callout-caution
-## Hinweise & Warnungen
+## Caution
 
-So werden Hinweise dargestellt.
+Pay attention when you see this. 
 :::
 
 ::: callout-important
-## Wichtig
+## Important
 
-Das ist wichtig!
+Even more attention now! :)
 :::
 
-```{r}
-knitr::write_bib(c(.packages(), "bookdown"), "bib/packages.bib")
-```
