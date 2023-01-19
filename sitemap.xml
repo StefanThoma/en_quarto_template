@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://stefanthoma.github.io/en_quarto_template/index.html</loc>
+    <lastmod>2023-01-19T09:45:56.180Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stefanthoma.github.io/en_quarto_template/chapters/intro.html</loc>
+    <lastmod>2023-01-19T09:45:56.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stefanthoma.github.io/en_quarto_template/chapters/part2.html</loc>
+    <lastmod>2023-01-19T09:45:56.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stefanthoma.github.io/en_quarto_template/chapters/summary.html</loc>
+    <lastmod>2023-01-19T09:45:56.183Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stefanthoma.github.io/en_quarto_template/chapters/references.html</loc>
+    <lastmod>2023-01-19T09:45:56.184Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stefanthoma.github.io/en_quarto_template/Book-Template.pdf</loc>
+    <lastmod>2023-01-19T09:45:55.865Z</lastmod>
+  </url>
+</urlset>
