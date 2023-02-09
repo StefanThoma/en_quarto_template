@@ -1,9 +1,9 @@
 project:
   type: book
-  execute-dir: project
   output-dir: docs
 
 execute: 
+  execute-dir: project
   freeze: auto
   
 book:
