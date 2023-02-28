@@ -24,8 +24,8 @@ book:
         - chapters/summary.qmd
     - chapters/references.qmd
   downloads: pdf
-  favicon: images/favicon.ico
-  image: images/frontimage.png  
+  favicon: figures/favicon.ico
+  image: figures/frontimage.png  
 
 
 bibliography: ["bib/packages.bib", "bib/project.bib"]
